@@ -1,6 +1,7 @@
 from app import app
 from flask import render_template
 from models import Locations, Sites
+from sqlalchemy import inspect
 
 @app.route("/")
 @app.route("/home")
@@ -17,3 +18,8 @@ def location(loc_id):
     location = Locations.query.get(loc_id)
     sites = Sites.query.filter_by(loc_id=loc_id).all()
     return render_template('location.html', location=location, sites=sites)
+
+@app.route("/sites")
+def sites():
+    sites = Sites.query.all()
+    return render_template('sites.html', sites=sites)
