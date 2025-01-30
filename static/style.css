@@ -2,28 +2,27 @@ h1 {
     text-align: center;
 }
 
-#home-body {
-    width: 100%;
-}
-
 #home-banner {
     background-image: url('images/home-banner.png');
     width: 100%;
 }
 
-.card {
-    float: left;
-    width: 45%;
-    padding: 10px;
+#home-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
 }
 
-.card1 {
-    margin-right: 10px;
+
+.card {
+    display: grid;
+    row-gap: 10px;
 }
 
 .card-img {
     width: 100%;
-    height: 100px;
+    height: 200px;
 }
 
 .card > p {
@@ -36,4 +35,27 @@ h1 {
     margin: auto 50%;
     padding: 5px;
     text-align: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.col {
+    display: grid;
+    row-gap: 10px;
+}
+
+.col > h3 {
+    text-align: center;
+}
+
+.col > button {
+    margin: auto;
+    padding: 10px 30px;
 }
