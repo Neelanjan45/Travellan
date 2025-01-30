@@ -1,0 +1,61 @@
+h1 {
+    text-align: center;
+}
+
+#home-banner {
+    background-image: url('images/home-banner.png');
+    width: 100%;
+}
+
+#home-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
+}
+
+
+.card {
+    display: grid;
+    row-gap: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+}
+
+.card > p {
+    text-align: center;
+}
+
+.card-btn {
+    width: 20%;
+    height: 30px;
+    margin: auto 50%;
+    padding: 5px;
+    text-align: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.col {
+    display: grid;
+    row-gap: 10px;
+}
+
+.col > h3 {
+    text-align: center;
+}
+
+.col > button {
+    margin: auto;
+    padding: 10px 30px;
+}

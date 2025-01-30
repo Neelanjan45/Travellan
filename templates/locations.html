@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div class="row">
+        {% for location in locations%}
+            <div class="col">
+                <h3>{{ location.title }}</h3>
+                <p>{{ location.description }}</p>
+                <button><a href="#">View More</a></button>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock%}
