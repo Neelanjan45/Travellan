@@ -2,11 +2,11 @@
 
 {% block content %}
     <div class="row">
-        {% for location in locations%}
+        {% for location in locations %}
             <div class="col">
                 <h3>{{ location.title }}</h3>
                 <p>{{ location.description }}</p>
-                <button><a href="#">View More</a></button>
+                <button><a href="{{ url_for('location', loc_id=location.id) }}">View More</a></button>
             </div>
         {% endfor %}
     </div>
