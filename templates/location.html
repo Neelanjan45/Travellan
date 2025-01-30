@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div class="row" id="location">
+        <h3>{{ location.title }}</h3>
+        <p>{{ location.description }}</p>
+    </div>
+    <h2 id="attraction-header">Famous Attractions</h2>
+    <div class="row" id="attractions">
+        {% for site in sites %}
+            <div class="col">
+                <img src="{{ site.image }}" alt="{{ site.title }}">
+                <h4>{{ site.title }}</h4>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

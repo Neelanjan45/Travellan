@@ -59,3 +59,23 @@ h1 {
     margin: auto;
     padding: 10px 30px;
 }
+
+#location {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+#attraction-header {
+    text-align: center;
+}
+
+#attractions {
+    margin: auto 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#attractions > div {
+    flex: 1 1 250px;
+    text-align: center;
+}

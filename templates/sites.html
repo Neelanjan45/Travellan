@@ -7,7 +7,7 @@
                 <img src="{{ site.image }}" alt="{{ site.title }}">
                 <h3>{{ site.title }}</h3>
                 <p>{{ site.description }}</p>
-                <h4>Location: <a href="#">{{ site.location.title }}</a></h4>
+                <h4>Location: <a href="{{ url_for('location', loc_id=site.loc_id) }}">{{ site.location.title }}</a></h4>
             </div>
         {% endfor %}
     </div>
