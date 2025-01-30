@@ -11,3 +11,5 @@ app.config['SQLALCHEMY_DATABASE_URI'] = r"sqlite:///" + os.path.join(os.getenv("
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
+import routes
