@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
+from flask_restful import Api
 
 load_dotenv()
 
@@ -12,4 +13,12 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
+api = Api(app)
+
 import routes
+import api_routes
+
+# To autorefresh
+# Not for prod
+if __name__ == '__main__':
+    app.run(debug=True)
